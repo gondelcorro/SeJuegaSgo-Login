@@ -2,7 +2,7 @@ import {LoginService} from './../_service/login.service';
 import {Router} from '@angular/router';
 import {environment} from './../../environments/environment';
 import {Component, OnInit} from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatLegacySnackBar as MatSnackBar} from '@angular/material/legacy-snack-bar';
 import * as decode from 'jwt-decode';
 
 @Component({
