@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {environment} from './../../environments/environment';
 import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import * as decode from 'jwt-decode';
+import decode from 'jwt-decode';
 
 @Component({
     selector: 'app-login',
