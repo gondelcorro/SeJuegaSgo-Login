@@ -24,40 +24,33 @@ import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent
-  ],
-  imports: [
-    MatTableModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatListModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSortModule,
-    MatSnackBarModule,
-    MatDialogModule,
-    MatCheckboxModule,
-    MatExpansionModule,
-    MatSelectModule,
-    MatStepperModule,
-    MatAutocompleteModule,
-    MatCardModule,
-    MatMenuModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        LoginComponent
+    ],
+    bootstrap: [AppComponent], imports: [MatTableModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatDividerModule,
+        MatListModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSortModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        MatCheckboxModule,
+        MatExpansionModule,
+        MatSelectModule,
+        MatStepperModule,
+        MatAutocompleteModule,
+        MatCardModule,
+        MatMenuModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
